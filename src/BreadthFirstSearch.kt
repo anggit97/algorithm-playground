@@ -19,13 +19,13 @@ fun main() {
 }
 
 
-class Graph(Vertex: Int) {
+class Graph(val Vertex: Int) {
 
-    var adj: Array<MutableList<Int>> = arrayOf()
+    private var adj: MutableList<MutableList<Int>> = mutableListOf()
 
     init {
         for (i in 0 until Vertex) {
-            adj[i] = mutableListOf()
+            adj.add(mutableListOf())
         }
     }
 
@@ -34,7 +34,7 @@ class Graph(Vertex: Int) {
     }
 
     fun BFS(s: Int) {
-        val visited: BooleanArray = booleanArrayOf()
+        val visited = BooleanArray(Vertex)
 
         val queue: MutableList<Int> = mutableListOf()
 
