@@ -48,19 +48,19 @@ fun ladderLength(beginWord: String, endWord: String, wordList: List<String>): In
 
     while (queue.isNotEmpty()) {
         val node = queue.removeAt(0)
-        val word = node.first
-        val level = node.second
-        for (i in 0 until length) {
-            val newWord = word.substring(0, i).plus("*").plus(word.substring(i + 1, length))
-            for (adjacentWord in allComboDict.getOrDefault(newWord, mutableListOf())) {
-                if (adjacentWord == newWord) return level.plus(1)
-
-                if (visitted.containsKey(adjacentWord).not()) {
-                    visitted[adjacentWord] = true
-                    queue.add(Pair(adjacentWord, level + 1))
-                }
-            }
-        }
+//        val word = node.first
+//        val level = node.second
+//        for (i in 0 until length) {
+//            val newWord = word.substring(0, i).plus("*").plus(word.substring(i + 1, length))
+//            for (adjacentWord in allComboDict.getOrDefault(newWord, mutableListOf())) {
+//                if (adjacentWord == newWord) return level.plus(1)
+//
+//                if (visitted.containsKey(adjacentWord).not()) {
+//                    visitted[adjacentWord] = true
+//                    queue.add(Pair(adjacentWord, level + 1))
+//                }
+//            }
+//        }
     }
     return 0
 }
