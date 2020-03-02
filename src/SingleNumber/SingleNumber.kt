@@ -27,3 +27,22 @@ fun singleNumber(sortedNums: IntArray): Int {
 
     return stack[0]
 }
+
+/**
+ * Hash Table Approach
+ * Time Complexity : O(n), because we reduce code to search value inside loop
+ */
+fun singleNumberWithHashMap(nums: IntArray): Int {
+    val hashTable = mutableMapOf<Int, Int>()
+    for ((index, item) in nums.withIndex()) {
+        try {
+            hashTable.remove(item)
+        } catch (e: Throwable) {
+            hashTable[index] = item
+        }
+    }
+
+    println(hashTable.toString())
+
+    return 0
+}
