@@ -6,7 +6,7 @@ Time complexity : O(n)O(n) because we simply traverse the given string one chara
 Space complexity : O(n)O(n) as we push all opening brackets onto the stack and in the worst case, we will end up pushing all the brackets onto the stack. e.g. ((((((((((.
  */
 fun main() {
-    val input = "{}[]"
+    val input = "(("
     println("Is valid parathesis : ")
     println(isValidParentheses2(input))
 }
@@ -35,5 +35,5 @@ fun isValidParentheses2(s: String): Boolean {
         }
     }
 
-    return true
+    return stack.isEmpty()
 }
