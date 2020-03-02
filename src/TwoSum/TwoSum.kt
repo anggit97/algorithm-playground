@@ -1,3 +1,5 @@
+package TwoSum
+
 fun main(){
     val input = intArrayOf(31, 2, 5, 7)
     val number = twoSum(input, 38)

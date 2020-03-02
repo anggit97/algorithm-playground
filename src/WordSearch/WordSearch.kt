@@ -1,3 +1,5 @@
+package WordSearch
+
 /**
  * Test Case
  * https://www.programcreek.com/2014/06/leetcode-word-search-java/
@@ -59,7 +61,7 @@ fun dfs(board: Array<CharArray>, word: String, i: Int, j: Int, k: Int): Boolean 
     //Check if its not out of bound of array
     if (i < 0 || j < 0 || i >= m || j >= n) return false
 
-    //Check if char in word exists in board (i,j)
+    //Check if char in word WordSearch.exists in board (i,j)
     if (board[i][j] == word[k]) {
         //store in temp var
         val temp = board[i][j]

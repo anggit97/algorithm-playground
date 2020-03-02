@@ -1,3 +1,5 @@
+package ReverseString
+
 fun main(){
     val inputs = CharArray(5)
     inputs[0] = 'h'
@@ -32,7 +34,7 @@ fun reverseString(s: CharArray){
  */
 fun reverseRecursionString(s: CharArray){
     print("[")
-    helperRecursion(s, 0, s.size-1)
+    helperRecursion(s, 0, s.size - 1)
 }
 
 fun helperRecursion(s: CharArray, left: Int, right: Int){

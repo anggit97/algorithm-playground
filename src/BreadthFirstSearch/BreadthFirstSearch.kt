@@ -1,3 +1,5 @@
+package BreadthFirstSearch
+
 /**
  * This Algorithm is to check what is all node is visit or not, if not we need to make another graph
  * cases :

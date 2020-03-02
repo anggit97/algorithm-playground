@@ -1,3 +1,5 @@
+package WordLadder
+
 /**
  * Using BFS (Breadth First Search) for a graph
  * Rule:
