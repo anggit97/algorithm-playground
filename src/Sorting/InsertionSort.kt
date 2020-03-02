@@ -1,4 +1,4 @@
-package sorting
+package Sorting
 
 /**
  * Insertion Sort => sorting values by finding the minimum value from list, and put it to begining of loop

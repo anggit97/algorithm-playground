@@ -1,4 +1,4 @@
-package sorting
+package Sorting
 
 fun main(){
     val unsortedArray = mutableListOf(
