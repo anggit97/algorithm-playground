@@ -1,17 +1,17 @@
 package WordBreak
 
 fun main() {
-    val wordDictValid = mutableListOf<String>(
+    val wordDictValid = mutableListOf(
         "leet",
         "code"
     )
 
-    val wordDictValid2 = mutableListOf<String>(
+    val wordDictValid2 = mutableListOf(
         "apple",
         "pan"
     )
 
-    val wordDictInvalid = mutableListOf<String>(
+    val wordDictInvalid = mutableListOf(
         "cats",
         "dog",
         "sand",
@@ -26,5 +26,10 @@ fun main() {
 }
 
 fun wordBreaks(s: String, wordDict: MutableList<String>): Boolean {
+    wordDict.forEach { word ->
+        if (s.contains(word)){
+
+        }
+    }
     return true
 }
