@@ -1,25 +1,39 @@
 package ValidParentheses
 
+/**
+ * Complexity analysis
+Time complexity : O(n)O(n) because we simply traverse the given string one character at a time and push and pop operations on a stack take O(1)O(1) time.
+Space complexity : O(n)O(n) as we push all opening brackets onto the stack and in the worst case, we will end up pushing all the brackets onto the stack. e.g. ((((((((((.
+ */
 fun main() {
-    val input = "{[)}"
+    val input = "{}[]"
     println("Is valid parathesis : ")
-    println(isValidParentheses(input))
+    println(isValidParentheses2(input))
 }
 
-fun isValidParentheses(s: String): Boolean {
+fun isValidParentheses2(s: String): Boolean {
     val map: Map<String, String> = mapOf(
-        Pair("[", "]"),
-        Pair("{", "}"),
-        Pair("(", ")")
+        Pair("]", "["),
+        Pair("}", "{"),
+        Pair(")", "(")
     )
 
-    val sArr = s.toCharArray()
-    var j = sArr.size - 1
-    for (i in 0 until sArr.size / 2) {
-        val pairVal1 = map.getValue(sArr[i].toString())
-        val closeParenthasis = sArr[j].toString()
-        if (pairVal1 != closeParenthasis) return false
-        j--
+    val stack: MutableList<String> = mutableListOf()
+
+    //ex : {[]}
+    s.forEach { char ->
+        if (map.containsKey(char.toString())) {
+            val topElement = if (stack.isEmpty()) {
+                "#"
+            } else {
+                stack.last()
+                stack.removeAt(stack.size - 1)
+            }
+            if (topElement != map[char.toString()]) return false
+        } else {
+            stack.add(char.toString())
+        }
     }
+
     return true
 }
