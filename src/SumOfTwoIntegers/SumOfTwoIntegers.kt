@@ -9,7 +9,7 @@ fun main() {
     val value2 = 2
 
     println("Sum Of Two Integer : ")
-    println(sumNumberRecursively(value1, value2))
+    println(sumNumbers(value1, value2))
 }
 
 /**
