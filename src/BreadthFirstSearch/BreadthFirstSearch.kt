@@ -21,7 +21,7 @@ fun main() {
 }
 
 
-class Graph(val Vertex: Int) {
+class Graph(private val Vertex: Int) {
 
     private var adj: MutableList<MutableList<Int>> = mutableListOf()
 
