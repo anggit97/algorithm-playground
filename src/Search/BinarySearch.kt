@@ -1,8 +1,11 @@
 package Search
 
+/**
+ * Time Complexity T(n) = T(n/2) + c
+ */
 fun main() {
-    val sampleArr = intArrayOf(1, 3, 2, 10, 5, 23, 16, 7, 4)
-    val searchNumber = 7
+    val sampleArr = intArrayOf(1, 4, 2, 3, 3)
+    val searchNumber = 3
     println("Search Number is : $searchNumber")
     println(binarySearch(sampleArr, searchNumber))
 }
@@ -29,6 +32,26 @@ fun binarySearch(arr: IntArray, searchNumber: Int): Boolean {
         }
     }
     return false
+}
+
+fun binarySearchIndex(arr: IntArray, searchNumber: Int): Int {
+    val remainArr = arr.sorted().toMutableList()
+    var endIndex: Int
+    while (remainArr.isNotEmpty()) {
+        val middleIndex = remainArr.size.div(2)
+        val middleNumber = remainArr[middleIndex]
+        endIndex = remainArr.size - 1
+        when {
+            searchNumber > middleNumber -> {
+                remainArr.removeRange(IntRange(0, middleIndex))
+            }
+            searchNumber < middleNumber -> {
+                remainArr.removeRange(IntRange(middleIndex, endIndex))
+            }
+            else -> return middleIndex
+        }
+    }
+    return 0
 }
 
 inline fun <reified T> MutableList<T>.removeRange(range: IntRange) {
