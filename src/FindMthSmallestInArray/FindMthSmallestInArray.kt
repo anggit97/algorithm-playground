@@ -1,13 +1,13 @@
 package FindMthSmallestInArray
 
 fun main() {
-    val testCaseArray = mutableListOf(
+    val testCaseArray = arrayOf(
         intArrayOf(1, 3),
         intArrayOf(2, 4, 6),
         intArrayOf(0, 9, 10, 11)
     )
 
-    val testCaseArray2 = mutableListOf(
+    val testCaseArray2 = arrayOf(
         intArrayOf(1, 3, 20),
         intArrayOf(2, 4, 6)
     )
@@ -19,7 +19,7 @@ fun main() {
 }
 
 fun findMthSmallestValueSmallestKShortestArray(
-    testCaseArray: MutableList<IntArray>,
+    testCaseArray: Array<IntArray>,
     m: Int
 ): Int {
     val result = mutableListOf<Int>()
