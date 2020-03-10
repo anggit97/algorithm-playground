@@ -1,5 +1,10 @@
 package BasicCalculator2
 
+/**
+ * https://happygirlzt.com/codelist.html#st
+ * https://happygirlzt.com/code/224.html
+ */
+
 fun main() {
     val testCase1 = "3+2*2+2"
     val testCase2 = " 8/8-2 "
