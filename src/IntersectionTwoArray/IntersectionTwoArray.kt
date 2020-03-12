@@ -1,8 +1,8 @@
 package IntersectionTwoArray
 
 fun main() {
-    val testCaseArr1 = intArrayOf(1,2,2,1)
-    val testCaseArr2 = intArrayOf(2,2)
+    val testCaseArr1 = intArrayOf(4, 9, 5)
+    val testCaseArr2 = intArrayOf(9, 4, 9, 8, 4)
 
     println("Intesection Of Two Array")
     println("Result Is ${intersect(testCaseArr1, testCaseArr2)}")
@@ -13,27 +13,26 @@ fun main() {
  * Time Complexcity : O(n2)
  */
 fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
-    val iteratorArr: IntArray
-    val comparatorArr: IntArray
+    val iteratorArr: MutableList<Int>
+    val comparatorArr: MutableList<Int>
     if (nums1.size < nums2.size) {
-        iteratorArr = nums1
-        comparatorArr = nums2
+        iteratorArr = nums1.toMutableList()
+        comparatorArr = nums2.toMutableList()
     } else {
-        iteratorArr = nums2
-        comparatorArr = nums1
+        iteratorArr = nums2.toMutableList()
+        comparatorArr = nums1.toMutableList()
     }
 
     val mutableList = mutableListOf<Int>()
 
     for (item in iteratorArr) {
-        for (item2 in comparatorArr) {
+        for ((index2, item2) in comparatorArr.withIndex()) {
             if (item == item2) {
-//                if (mutableList.contains(item)) break
                 mutableList.add(item)
+                comparatorArr.removeAt(index2)
                 break
             }
         }
     }
-    println(mutableList)
     return mutableList.toIntArray()
 }
