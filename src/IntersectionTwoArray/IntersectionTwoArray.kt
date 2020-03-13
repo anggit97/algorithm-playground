@@ -36,3 +36,11 @@ fun intersect(nums1: IntArray, nums2: IntArray): IntArray {
     }
     return mutableList.toIntArray()
 }
+
+/**
+ * HashMap solution
+ * Time Complexity : O(n)
+ */
+fun intersect2(nums1: IntArray, nums2: IntArray): IntArray {
+    return nums1
+}
