@@ -18,6 +18,6 @@ class ToCamelCase {
                 ch[resInd++] = ch[index]
             }
         }
-        return ch.concatToString().substring(0, n - cnt)
+        return ch.joinToString("").substring(0, n - cnt)
     }
 }
