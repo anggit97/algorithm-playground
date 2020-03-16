@@ -25,11 +25,11 @@ fun coinChange(coins: IntArray, amount: Int): Int {
             remaningExchange -= item
             mutableList.add(item)
             sumOfCoinExchange++
+            println(remaningExchange)
             break
         }
     }
     println(mutableList)
-
     if (remaningExchange < 0) {
         return -1
     }
