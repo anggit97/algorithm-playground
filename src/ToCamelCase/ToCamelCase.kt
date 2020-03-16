@@ -3,7 +3,6 @@ package ToCamelCase
 
 class ToCamelCase {
 
-    @ExperimentalStdlibApi
     fun toCamelCase(str: String): String {
         var cnt = 0
         val n = str.length
