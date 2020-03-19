@@ -20,4 +20,12 @@ class DailyTemperaturesTest {
             SUT.dailyTemperatures(intArrayOf(73, 74, 75, 71, 69, 72, 76, 73)).toMutableList()
         )
     }
+
+    @Test
+    internal fun dailyTemperaturesStack() {
+        assertEquals(
+            intArrayOf(1, 1, 4, 2, 1, 1, 0, 0).toMutableList(),
+            SUT.dailyTemperaturesStack(intArrayOf(73, 74, 75, 71, 69, 72, 76, 73)).toMutableList()
+        )
+    }
 }
