@@ -5,8 +5,6 @@ fun main() {
     val k = 2
 
 
-    "ababbcde"
-
     println("The longest substring : ")
     println(longestSubstring(s, k))
 }
