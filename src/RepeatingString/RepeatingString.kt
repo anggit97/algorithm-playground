@@ -19,4 +19,29 @@ class RepeatingString {
 
         return countA
     }
+
+    fun repeatedString2(s: String, n: Long): Long {
+        var count: Long = 0
+
+        var i = 0
+        while (i < s.length) {
+            if (s[i] == 'a')
+                count++
+            i++
+        }
+
+        val div = n.div(s.length)
+        val reminder = n.rem(s.length)
+
+        count *= div
+
+        i = 0
+        while (i < reminder) {
+            if (s[i] == 'a')
+                count++
+            i++
+        }
+
+        return count
+    }
 }

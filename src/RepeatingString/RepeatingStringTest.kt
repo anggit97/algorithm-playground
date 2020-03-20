@@ -15,8 +15,8 @@ class RepeatingStringTest {
 
     @Test
     fun repeatingString() {
-        assertEquals(7, SUT.repeatedString("aba", 10))
-        assertEquals(100, SUT.repeatedString("a", 100))
-        assertEquals(1000000000000, SUT.repeatedString("a", 1000000000000))
+        assertEquals(7, SUT.repeatedString2("aba", 10))
+        assertEquals(100, SUT.repeatedString2("a", 100))
+        assertEquals(1000000000000, SUT.repeatedString2("a", 1000000000000))
     }
 }
