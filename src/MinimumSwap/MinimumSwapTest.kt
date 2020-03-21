@@ -31,12 +31,12 @@ class MinimumSwapTest {
             )
         )
 
-//        assertEquals(
-//            7, SUT.minimumSwaps(
-//                arrayOf(
-//                    1, 3, 5, 2, 4, 6, 7
-//                )
-//            )
-//        )
+        assertEquals(
+            3, SUT.minimumSwaps(
+                arrayOf(
+                    1, 3, 5, 2, 4, 6, 7
+                )
+            )
+        )
     }
 }
