@@ -1,7 +1,5 @@
 package PalindromicSubstrings
 
-import ValidParentheses.isValidParentheses2
-
 class PalindromicSubstrings {
 
     fun countSubstrings(s: String): Int {
@@ -25,7 +23,7 @@ class PalindromicSubstrings {
         return countPalindrom
     }
 
-    fun isPalindromeWithFunction(s: String): Boolean {
+    private fun isPalindromeWithFunction(s: String): Boolean {
         val reverse = s.reversed().toCharArray()
         val notRevers = s.toCharArray()
         return notRevers.contentEquals(reverse)
