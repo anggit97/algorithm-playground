@@ -15,6 +15,9 @@ class Encryption {
         val bottomResult = floor(resultRoot).toInt()
         val topResult = ceil(resultRoot).toInt()
 
+        println(bottomResult)
+        println(topResult)
+
         var count = 0
         var m = mutableListOf<String>()
         for ((index, item) in trimAndReplaceText.withIndex()) {
@@ -28,11 +31,16 @@ class Encryption {
             count++
         }
 
+        println(mutableList)
 
         var resultString = ""
         for (index in 0 until topResult) {
-            for (index2 in 0 until bottomResult){
-                resultString = resultString.plus(mutableList[index2][index])
+            for (index2 in 0 until mutableList.size){
+                try {
+                    resultString = resultString.plus(mutableList[index2][index])
+                }catch(e: Throwable){
+                    break
+                }
             }
             resultString = resultString.plus(" ")
         }

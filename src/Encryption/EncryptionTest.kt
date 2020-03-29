@@ -16,6 +16,7 @@ class EncryptionTest {
     @Test
     fun encryption() {
         assertEquals("hae and via ecy", SUT.encryption("haveaniceday"))
-//        assertEquals("fto ehg ee dd", SUT.encryption("feedthedog"))
+        assertEquals("fto ehg ee dd", SUT.encryption("feedthedog"))
+//        assertEquals("isieae fdtonf fotrga anoyec cttctt tfhhhs", SUT.encryption("iffactsdontfittotheorychangethefacts"))
     }
 }
