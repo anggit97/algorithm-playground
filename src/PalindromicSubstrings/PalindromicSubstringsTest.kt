@@ -17,4 +17,9 @@ class PalindromicSubstringsTest {
     fun palindromicSubstring() {
         assertEquals(3, SUT.countSubstrings("abc"))
     }
+
+    @Test
+    fun palindromicSubstringV2() {
+        assertEquals(3, SUT.countSubstringsV2("abc"))
+    }
 }
