@@ -32,7 +32,5 @@ class TreeNode(var `val`: Int) {
 }
 
 fun isSymmetric(root: TreeNode): Boolean {
-//    val iterables = root.
-//    while (root.left != null)
     return false
 }
