@@ -21,5 +21,12 @@ class CutTheStickTest {
             expected,
             actual
         )
+
+        val expected2 = arrayOf(8, 6, 4, 1).toMutableList()
+        val actual2 = SUT.cutTheSticks(arrayOf(1, 2, 3, 4, 3, 3, 2, 1)).toMutableList()
+        assertEquals(
+            expected2,
+            actual2
+        )
     }
 }
