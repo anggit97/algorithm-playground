@@ -17,6 +17,6 @@ class MinimumDistance {
             }
         }
 
-        return result.min() ?: 0
+        return result.min() ?: -1
     }
 }
