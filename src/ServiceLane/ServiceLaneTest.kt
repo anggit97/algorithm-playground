@@ -32,5 +32,24 @@ class ServiceLaneTest {
             expected,
             actual
         )
+
+
+        val expected2 = arrayOf(2, 1, 1, 1, 2).toMutableList()
+        val actual2 = SUT.serviceLane(
+            5,
+            arrayOf(
+                arrayOf(1, 2, 2, 2, 1),
+                arrayOf(2, 3),
+                arrayOf(1, 4),
+                arrayOf(2, 4),
+                arrayOf(2, 4),
+                arrayOf(2, 3)
+            )
+        ).toMutableList()
+
+        assertEquals(
+            expected2,
+            actual2
+        )
     }
 }
