@@ -17,5 +17,6 @@ class HalloweensaleTest {
     fun halloweenSale() {
         assertEquals(6, SUT.howManyGames(20, 3, 6, 80))
         assertEquals(7, SUT.howManyGames(20, 3, 6, 85))
+        assertEquals(0, SUT.howManyGames(100 ,1 ,1 ,99))
     }
 }

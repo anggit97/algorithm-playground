@@ -8,7 +8,7 @@ class Halloweensale {
         var currentPrice = p
         var totalBuying = 0
 
-        while (remainingMoney > m) {
+        while (remainingMoney >= m && remainingMoney >= currentPrice) {
             remainingMoney -= currentPrice
             currentPrice -= d
             if (currentPrice <= m) currentPrice = m
