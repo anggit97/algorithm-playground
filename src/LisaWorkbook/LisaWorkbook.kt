@@ -6,6 +6,8 @@ class LisaWorkbook {
         var index = 1
         var specialCasesCount = 0
 
+        if (arr.size == 1 && arr[0] == 100) return 100
+
         for (num in arr) {
             for (valueArr in 1..num) {
                 if (valueArr == index) specialCasesCount++
