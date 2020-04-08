@@ -16,5 +16,6 @@ class StrongPasswordTest{
     @Test
     fun strongPassword(){
         assertEquals(3, SUT.minimumNumber(3, "Ab1"))
+        assertEquals(1, SUT.minimumNumber(11, "#HackerRank"))
     }
 }
