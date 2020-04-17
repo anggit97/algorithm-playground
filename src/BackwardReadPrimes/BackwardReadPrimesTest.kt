@@ -23,5 +23,7 @@ class BackwardReadPrimesTest{
     @Test
     fun isPrivateNumber(){
         assertEquals(true, SUT.isPrimeNumber(29))
+        assertEquals(true, SUT.isPrimeNumber(19))
+        assertEquals(false, SUT.isPrimeNumber(21))
     }
 }

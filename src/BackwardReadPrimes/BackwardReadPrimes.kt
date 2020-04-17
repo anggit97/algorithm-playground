@@ -21,11 +21,10 @@ class BackwardReadPrimes {
     }
 
     fun isPrimeNumber(number: Long): Boolean {
-        for (i in 2..number / 2) {
-            if (number % i == 0L) {
-                return false
-            }
+        return if (number.rem(2L) != 0L){
+            number.rem(3L) != 0L && number.rem(5L) != 0L && number.rem(7L) != 0L
+        }else{
+            false
         }
-        return true
     }
 }
