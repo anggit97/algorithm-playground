@@ -1,0 +1,4 @@
+package MagicSquare
+
+class MagicSquare {
+}
